@@ -11,8 +11,10 @@ path = "src/app/main.rs"
 
 [lib]
 name = "frontend_lib"
-path = "src/lib/lib.rs"
+path = "src/lib/mod.rs"
 
 [dependencies]
 sycamore = "0.8"
 sycamore-router = "0.8"
+chrono = "0.4.22"
+

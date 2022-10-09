@@ -5,6 +5,8 @@ use sycamore_router::{Route, Router, HistoryIntegration};
 
 use super::home::Home;
 use super::about::About;
+use super::writing::Writing;
+use super::projects::Projects;
 
 #[derive(Route)]
 enum SiteRoutes {
@@ -12,6 +14,10 @@ enum SiteRoutes {
     Home,
     #[to("/about")]
     About,
+    #[to("/writing")]
+    Writing,
+    #[to("/projects")]
+    Projects,
     #[not_found]
     NotFound,
 }
@@ -30,6 +36,12 @@ pub fn SiteRouter<G: Html>(cx: Scope) -> View<G> {
                             },
                             SiteRoutes::About => view! { cx,
                                 About {}
+                            },
+                            SiteRoutes::Writing => view! { cx,
+                                Writing {}
+                            },
+                            SiteRoutes::Projects => view! { cx,
+                                Projects {}
                             },
                             SiteRoutes::NotFound => view! { cx, 
                                 "404 Not Found"
