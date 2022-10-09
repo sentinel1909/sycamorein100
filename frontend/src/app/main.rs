@@ -2,7 +2,7 @@
 
 use sycamore::prelude::*;
 
-use frontend_lib::routes::router::SiteRouter;
+use sycamorein100_lib::routes::router::SiteRouter;
 
 fn main() {
     sycamore::render(|cx| {
