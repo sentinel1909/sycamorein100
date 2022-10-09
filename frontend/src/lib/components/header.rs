@@ -1,7 +1,7 @@
 // header.rs
 
-use sycamore::prelude::*;
 use crate::components::navigation::Navigation;
+use sycamore::prelude::*;
 
 #[component]
 pub fn Header<G: Html>(cx: Scope) -> View<G> {

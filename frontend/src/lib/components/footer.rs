@@ -1,12 +1,12 @@
 // footer.rs
 
+use chrono::{Datelike, Local};
 use sycamore::prelude::*;
-use chrono::{Local, Datelike};
 
 #[component]
 pub fn Footer<G: Html>(cx: Scope) -> View<G> {
-      let year = Local::now().year();
-      view! { cx,
+    let year = Local::now().year();
+    view! { cx,
         footer {
             p { "Copyright" " " (year) " " "Jeffery D Mitchell All Rights Reserved" }
             ul {

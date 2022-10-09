@@ -2,15 +2,18 @@
 
 use sycamore::prelude::*;
 
-use crate::components::header::Header;
 use crate::components::footer::Footer;
+use crate::components::header::Header;
 use crate::domain::data::get_posts;
 
 #[component]
 pub fn Home<G: Html>(cx: Scope) -> View<G> {
-    let posts = get_posts(); 
+    let posts = get_posts();
     let latest_posts = View::new_fragment(
-        posts.iter().map(|&x| view! { cx, article { p { (x) } }}).collect()
+        posts
+            .iter()
+            .map(|&x| view! { cx, article { p { (x) } }})
+            .collect(),
     );
     view! { cx,
         Header {}
